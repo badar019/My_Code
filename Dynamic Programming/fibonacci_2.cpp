@@ -3,19 +3,18 @@ dynamic programming)
 */
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> dp;
-int fib(int n){
-    if (n == 0) return 0; //dp[0]=0
-    if (n == 1) return 1; // dp[1]=1
+int fib(vector<int>&dp ,int n){
+    if (n <=1) return dp[n]=n; //
     if(dp[n]!=-1){
         return dp[n]; //this condition to avoid overlapping
     }
-    return dp[n]=fib(n-1)+fib(n-2);
+    return dp[n]=fib(dp,n-1)+fib(dp,n-2);
 }
 int main(){
     cout << "Enter a number: " ;
     int n;
     cin >> n;
-    dp.resize(n+1,-1); 
-    cout << fib(n) << endl;
+     
+    vector<int> dp(n+1,-1);
+    cout << fib(dp,n) << endl;
 }

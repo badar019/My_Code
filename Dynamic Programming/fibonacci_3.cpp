@@ -1,4 +1,4 @@
-/* This c++ program intends to compute nth fibonacci
+/* This c++ program intends to compute nth fibonacci (space optimization)
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -13,7 +13,7 @@ int fib(int n){
         t1=t2;
         t2=temp;
     }
-    return temp;
+    return t2;
 }
 int main(){
     int n;
