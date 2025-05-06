@@ -1,28 +1,29 @@
-def add(a,b):
+def add(a,b):#addition
     return a+b
-def multiply(a,b):
-    return a*b
-def subtract(a,b):
+def subtract(a,b):#subtract
     return a-b
+def multiply(a,b): #multiply
+    return a*b
 def divide(a,b):
-    if(b==0):
-        return "Invalid"
+    if b== 0:
+        return "Invslid"
     return a/b
-num1=float(input("Enter the first number: "))
-num2=float(input("Enter the second number:"))
 
-print("Select your choice")
-print("1.add 2.Subtract 3.Multiply 4.Divide ")
+print("Select a choice.")
+print("1.Add 2.Subtract 3.Multiply 4.Divide. ")
 
-choice =input("choice (1/2/3/4)")
+num1= float(input("Enter the first  number: "))
+num2 =float(input("Enter the second number: "))
+
+choice = input("Select your choice (1/2/3/4): ")
 
 if choice =='1':
-    print("Result: ",add(num1,num2))
+    print(f"Result: {add(num1,num2)}")
 elif choice =='2':
-    print("Result: ",subtract(num1,num2))
-elif choice=='3':
-    print("Result: ",multiply(num1,num2))
-elif choice=='4':
-    print("Result: ",divide(num1,num2))
-else:
-    print("Invalid",)
+    print(f"Result: {subtract(num1,num2)}")
+elif choice =='3':
+    print(f"Result: {multiply(num1,num2)}")
+elif choice == '4':
+    print(f"Result: {divide(num1,num2)}")
+else :
+    print("Invalid choice.")
